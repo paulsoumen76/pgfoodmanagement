@@ -1,0 +1,12 @@
+body{
+  background-color: lightblue;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+table,thead,th,tr,td{
+  border: 2px solid red;
+  font-size: 20px;
+  color:black;
+  margin:auto;
+  background-color:yellow;
+}

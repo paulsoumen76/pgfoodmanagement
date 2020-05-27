@@ -1,0 +1,14 @@
+{%extends 'foodmanageapp/parent.html'%}
+{%block body_block%}
+<body align=center>
+  <h1>Login to see Menu</h1>
+  <form class="container"  method="post">
+    {{form.as_p}}
+    {%csrf_token%}<br>
+    <button class='btn btn-primary btn-lg' type="submit" name="button">login</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+     <a class='btn btn-primary btn-lg' href="/signup">New User?</a>
+
+  </form>
+</body>
+{%endblock%}

@@ -1,0 +1,13 @@
+{%extends 'foodmanageapp/parent.html'%}
+{%block body_block%}
+<body>
+  <h1>SSR PG Guest Registration</h1>
+  <form  method="post" enctype="multipart/form-data">
+    <div class="jumbotron" align=center>
+      {{form.as_p}}
+      {%csrf_token%}
+      <button class='btn btn-primary btn-lg' type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+{%endblock%}

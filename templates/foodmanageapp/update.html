@@ -1,0 +1,14 @@
+{%extends 'foodmanageapp/parent.html'%}
+{%block body_block%}
+<body align='center'>
+  <h1>Item Update Form</h1>
+  <form method="post">
+      {%csrf_token%}
+      DAY:<input type="text" name="day" value="{{item.day}}"><br>
+      BREAKFAST:<input type="text" name="breakfast" value="{{item.breakfast}}"><br>
+      LUNCH:<input type="text" name="lunch" value="{{item.lunch}}"><br>
+      DINNER:<input type="text" name="dinner" value="{{item.dinner}}"><br><br>
+    <button class='btn btn-warning btn-lg' type="submit" name="button">Submit</button>
+  </form>
+</body>
+{%endblock%}

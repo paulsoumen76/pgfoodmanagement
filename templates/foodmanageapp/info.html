@@ -1,0 +1,12 @@
+{%extends 'foodmanageapp/parent.html'%}
+{%block body_block%}
+<div class="container">
+  <body align='jumbotron'>
+  <form method="post" enctype="multipart/form-data"><br><br>
+    {{form.as_p}}
+    {%csrf_token%}
+    <button class='btn btn-primary btn-lg' type="submit" name="button">Submit</button>
+  </form>
+</body>
+</div>
+{%endblock%}

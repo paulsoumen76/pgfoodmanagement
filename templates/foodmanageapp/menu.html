@@ -1,0 +1,28 @@
+{%extends 'foodmanageapp/parent.html'%}
+{%block body_block%}
+<body align=center>
+  <h1>Hi {{user.get_username}} weekly menu for our pg</h1><br><br>
+  <h2>{{user.dp}}</h2>
+  <table>
+    <thead>
+      <th>DAY</th>
+      <th>BREAKFAST</th>
+      <th>LUNCH</th>
+      <th>DINNER</th>
+      <th>ACTION</th>
+    </thead>
+    {%for items in menu%}
+    <tr>
+      <td>{{items.day}}</td>
+      <td>{{items.breakfast}}</td>
+      <td>{{items.lunch}}</td>
+      <td>{{items.dinner}}</td>
+      <td><a href="/update/{{items.id}}">update</a></td>
+    </tr>
+    {%endfor%}
+  </table><br><br>
+  <a class='btn btn-primary btn-lg' href="/breakfast">BOOK BREAKFAST</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <a class='btn btn-primary btn-lg' href="/lunch">BOOK LUNCH</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <a class='btn btn-primary btn-lg' href="/dinner">BOOK DINNER</a>
+</body>
+{%endblock%}
